@@ -28,7 +28,7 @@ def calculate_cttr(tokens):
     return unique_tokens/np.sqrt(2*total_tokens)
 
 def calculate_mattr(tokens,window_size=100):
-    window_size=min(window_size,len(tokens)//2)##to ensure that window size is not too big for shorter text
+    window_size=min(window_size,len(tokens)//2) ##to ensure that window size is not too big for shorter text
     if len(tokens)<window_size:
         return calculate_ttr(tokens)
     
